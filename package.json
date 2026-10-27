@@ -1,0 +1,42 @@
+{
+  "name": "agent-memory-md",
+  "version": "0.1.0",
+  "description": "Markdown-native memory for AI agents — BM25 recall, topic pages, and compaction-aware memory patches. No vector database, no server, no API calls.",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./recall": "./src/recall.mjs",
+    "./topics": "./src/topics.mjs",
+    "./compaction": "./src/compaction.mjs",
+    "./rerank": "./src/rerank.mjs"
+  },
+  "bin": {
+    "memory-md": "./bin/cli.mjs"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "demo": "node bin/cli.mjs recall \"老板喝什么咖啡\" --dir examples/memory --smart -k 2"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "memory",
+    "long-term-memory",
+    "markdown",
+    "bm25",
+    "rag",
+    "llm",
+    "compaction"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
